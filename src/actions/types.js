@@ -1,0 +1,19 @@
+export const authTypes = {
+	SIGN_UP: 'SIGN_UP',
+	LOG_IN: 'LOG_IN',
+	LOG_OUT: 'LOG_OUT',
+	AUTH_LOADING: 'AUTH_LOADING'
+};
+
+export const userTypes = {
+	GET_USER_INFO: 'GET_USER_INFO',
+	CLEAR_USER: 'CLEAR_USER',
+	POST_LOADING: 'POST_LOADING',
+	NEW_POST: 'NEW_POST'
+};
+
+export const postTypes = {
+	GET_POSTS: 'GET_POSTS',
+	NEW_POST: 'NEW_POST',
+	POSTS_LOADING: 'POSTS_LOADING'
+};
