@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar';
+import Posts from './components/Posts';
 
 class App extends Component {
+
+  state = {
+    posts: [
+      { username:'Chris', avatar:'https://www.laravelnigeria.com/img/chris.jpg', caption:'Moving the community!', image:'https://pbs.twimg.com/media/DOXI0IEXkAAkokm.jpg'},
+      { username:'OG', avatar:'https://www.laravelnigeria.com/img/chris.jpg', caption:'Holding a mic', image:'https://pbs.twimg.com/media/DOXI0IEXkAAkokm.jpg'}
+    ]
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Navbar />
+        <section className="app-main">
+          <Posts posts={ this.state.posts } />
+        </section>
       </div>
     );
   }
